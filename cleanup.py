@@ -6,11 +6,12 @@ from tqdm import tqdm
 init(autoreset=True)
 
 class BlenderCleanup:
-    def __init__(self, blender_config_files, source_folder, destination_folder, temp_folder):
+    def __init__(self, blender_config_files, source_folder, destination_folder, temp_folder, folders_to_delete):
         self.blender_config_files = blender_config_files
         self.source_folder = source_folder
         self.destination_folder = destination_folder
         self.temp_folder = temp_folder
+        self.folders_to_delete = folders_to_delete
 
     def check_config_files_exist(self):
         return all(os.path.exists(file) for file in self.blender_config_files)
@@ -43,12 +44,16 @@ class BlenderCleanup:
         except Exception as e:
             print(f"{Fore.RED}Error during copying folder: {e}{Style.RESET_ALL}")
 
-    def delete_folder(self):
-        try:
-            shutil.rmtree(self.source_folder)
-            print(f"{Fore.GREEN}Folder {Fore.YELLOW}'{self.source_folder}'{Fore.GREEN} has been removed.{Style.RESET_ALL}")
-        except Exception as e:
-            print(f"{Fore.RED}Error during deleting folder: {e}{Style.RESET_ALL}")
+    def delete_folders(self):
+        for folder_name, folder_path in self.folders_to_delete.items():
+            try:
+                if os.path.exists(folder_path):
+                    shutil.rmtree(folder_path)
+                    print(f"{Fore.GREEN}Folder {Fore.YELLOW}'{folder_name}'{Fore.GREEN} has been removed.{Style.RESET_ALL}")
+                else:
+                    print(f"{Fore.YELLOW}Folder {Fore.YELLOW}'{folder_name}'{Fore.YELLOW} does not exist, skipping...{Style.RESET_ALL}")
+            except Exception as e:
+                print(f"{Fore.RED}Error during deleting folder '{folder_name}': {e}{Style.RESET_ALL}")
 
     def delete_blend_files_in_temp(self):
         try:
@@ -71,17 +76,22 @@ def main():
     destination_folder = script_directory
     temp_folder = os.path.expandvars(r'%temp%')
 
-    cleaner = BlenderCleanup(blender_config_files, source_folder, destination_folder, temp_folder)
+    folders_to_delete = {
+        "Blender Foundation AppData Roaming": source_folder,
+        "Blender Foundation AppData Local": r"C:\Users\Misiu\AppData\Local\Blender Foundation"
+    }
+
+    cleaner = BlenderCleanup(blender_config_files, source_folder, destination_folder, temp_folder, folders_to_delete)
 
     cleaner.display_config_files()
     confirm = input(f"{Fore.CYAN}Do you want to proceed with copying and cleaning Blender folders? (Y/N): {Style.RESET_ALL}").lower()
     if confirm in ['y', 'yes']:
         cleaner.copy_folder()
-        cleaner.delete_folder()
+        cleaner.delete_folders()
         cleaner.delete_blend_files_in_temp()
     else:
         print(f"{Fore.YELLOW}Operation cancelled.{Style.RESET_ALL}")
 
 if __name__ == "__main__":
-    os.system("title Cleaner")
+    os.system("title Cleanup Script")
     main()
