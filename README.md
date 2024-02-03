@@ -8,6 +8,8 @@ PortableBlenderManager simplifies the management of Blender's portable edition b
 - [Usage](#usage)
   - [Installation Guide](#installation-guide)
   - [How to Run](#how-to-run)
+    - [Automated Setup](#simplified-setup-process)
+    - [Manual Installation](#manual-installation-for-advanced-users)
 - [FAQ](#faq)
 - [Credits](#credits)
 - [Disclaimer](#disclaimer)
@@ -62,35 +64,64 @@ To install and set up PortableBlenderManager, follow these steps:
 
 ### How to Run
 
-Once you have installed PortableBlenderManager, follow these steps to run it:
+After installing PortableBlenderManager, here are the steps to get it up and running:
 
-1. **Running the Downloader Script:**
-   - Open Command Prompt.
-   - Navigate to the `.archive` folder inside the PortableBlenderManager directory. For example:
+### Simplified Setup Process
+
+For those who do not have the necessary Python dependencies installed globally, you can still run PortableBlenderManager effortlessly using a prepared batch file. This method is ideal for users seeking a hassle-free setup.
+
+**Instructions:**
+
+1. **Prepare the Batch File:**
+   - Make sure there's an `execute.bat` file within your PortableBlenderManager directory. This file is designed to automate the environment setup, install all required dependencies, and execute the necessary scripts for you.
+
+2. **Access Command Prompt Quickly:**
+   - Simply navigate to the PortableBlenderManager directory in File Explorer, click on the address bar, type `cmd`, and press `Enter`. This opens Command Prompt directly in the desired directory.
+
+3. **Run the Batch File:**
+   - In Command Prompt, start the `execute.bat` by typing its name and hitting `Enter`:
      ```
-     cd "C:\Users\%username%\Downloads\PortableBlenderManager\.archive"
+     execute.bat
      ```
-   - Run the downloader script to download Blender:
+
+This approach automatically sets up everything needed to run PortableBlenderManager, including the creation of a virtual environment and installation of dependencies, ensuring a smooth start even for those new to Python environments.
+
+### Manual Installation for Advanced Users
+
+For users comfortable with managing Python environments and dependencies:
+
+1. **Download Blender:**
+   - Open Command Prompt by typing `cmd` in the File Explorer address bar within the PortableBlenderManager directory.
+   - Move to the `.archive` subdirectory:
+     ```
+     cd ".archive"
+     ```
+   - Initiate the download script:
      ```
      python downloader.py
      ```
 
-2. **Starting Blender:**
-   - After downloading Blender, navigate back to the main PortableBlenderManager directory and run the startup script:
+2. **Launch Blender:**
+   - Return to the main directory of PortableBlenderManager:
      ```
      cd ..
+     ```
+   - Start Blender using the startup script:
+     ```
      python startup.py
      ```
 
-3. **Other Scripts:**
-   - `destroy_session.py`: Completely removes all Blender elements from your system. Use this if you want to entirely uninstall Blender.
+3. **Utility Scripts:**
+   - For complete removal of Blender:
      ```
      python destroy_session.py
      ```
-   - `reset_settings.py`: Resets Blender settings to their defaults. Useful for troubleshooting or starting fresh.
+   - To reset Blender settings to defaults:
      ```
      python reset_settings.py
      ```
+
+This manual method provides more control over the installation and running processes of PortableBlenderManager for users with specific requirements or preferences.
 
 ## FAQ
 

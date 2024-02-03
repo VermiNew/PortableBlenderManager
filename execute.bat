@@ -40,3 +40,10 @@ if /i "%install_libraries_choice%"=="y" (
 .\venv\Scripts\python.exe -m pip install --upgrade pip
 
 echo Console ready!
+
+cd .archive
+echo Starting the download process...
+call downloader.py
+cd ..
+echo Initializing the main process...
+call startup.py

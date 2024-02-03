@@ -8,6 +8,10 @@ import configparser
 init(autoreset=True)
 
 def download_file(url, filename):
+    if os.path.exists(filename):
+        print(f"{Fore.YELLOW}The file {Fore.LIGHTMAGENTA_EX}{filename}{Fore.YELLOW} already exists. If the existing archive is corrupted, please manually delete the .zip file and rerun the script.{Style.RESET_ALL}")
+        return False
+    
     response = requests.get(url, stream=True)
     total_size_in_bytes = int(response.headers.get('content-length', 0))
     block_size = 1024
