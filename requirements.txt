@@ -3,3 +3,6 @@ tqdm
 
 # colorama is used for colored console output
 colorama
+
+# The requests library is used for making HTTP requests
+requests
