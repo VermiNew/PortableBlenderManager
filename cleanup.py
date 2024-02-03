@@ -51,7 +51,7 @@ class BlenderCleanup:
                     shutil.rmtree(folder_path)
                     print(f"{Fore.GREEN}Folder {Fore.YELLOW}'{folder_name}'{Fore.GREEN} has been removed.{Style.RESET_ALL}")
                 else:
-                    print(f"{Fore.YELLOW}Folder {Fore.YELLOW}'{folder_name}'{Fore.YELLOW} does not exist, skipping...{Style.RESET_ALL}")
+                    print(f"{Fore.GREEN}Folder {Fore.YELLOW}'{folder_name}'{Fore.GREEN} does not exist, skipping...{Style.RESET_ALL}")
             except Exception as e:
                 print(f"{Fore.RED}Error during deleting folder '{folder_name}': {e}{Style.RESET_ALL}")
 
@@ -93,5 +93,5 @@ def main():
         print(f"{Fore.YELLOW}Operation cancelled.{Style.RESET_ALL}")
 
 if __name__ == "__main__":
-    os.system("title Cleanup Script")
+    os.system("title Portable Blender Cleanup Script")
     main()

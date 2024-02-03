@@ -61,7 +61,7 @@ class BlenderManager:
                     print(f"{Fore.CYAN}Awaiting Blender shutdown...{Style.RESET_ALL}")
                     process.wait()  # Wait for Blender to close
                     print(f"{Fore.CYAN}Initiating cleaning process...{Style.RESET_ALL}")
-                    subprocess.run(["python", "cleanup.py"])
+                    subprocess.run("python cleanup.py", shell=True)
                     print(f"{Fore.GREEN}The cleaning process has been successfully completed.{Style.RESET_ALL}")
                 else:
                     print(f"{Fore.RED}Blender folder structure is incorrect.{Style.RESET_ALL}")

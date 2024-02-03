@@ -158,3 +158,12 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+
+# Ignore Blender binary folder
+blender-4.0.2-windows-x64/
+
+# Ignore Blender Foundation related folder
+Blender Foundation/
+
+# Ignore specific Blender archive
+.archive/blender-4.0.2-windows-x64.zip

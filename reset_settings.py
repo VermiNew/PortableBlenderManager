@@ -1,5 +1,4 @@
 import os
-import shutil
 from tqdm import tqdm
 from colorama import Fore, Style, init
 init(autoreset=True)
