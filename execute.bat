@@ -43,7 +43,7 @@ echo Console ready!
 
 cd .archive
 echo Starting the download process...
-call downloader.py
+call py downloader.py
 cd ..
 echo Initializing the main process...
-call startup.py
+call py startup.py
