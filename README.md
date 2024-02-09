@@ -179,6 +179,10 @@ Contributions are welcome! If you have suggestions, improvements, or bug fixes, 
 [![Stable Release](https://img.shields.io/badge/Release-Stable-darkgreen.svg)](https://github.com/VermiNew/PortableBlenderManager/releases/tag/stable)
 [![Contributor Friendly](https://img.shields.io/badge/Contributions-Welcome-darkgreen.svg)](https://github.com/VermiNew/PortableBlenderManager/blob/main/CONTRIBUTING.md)
 [![GitHub Stars](https://img.shields.io/github/stars/VermiNew/PortableBlenderManager.svg)](https://github.com/VermiNew/PortableBlenderManager/stargazers)
+[![Build Status](https://img.shields.io/travis/com/PortableBlenderManager/master.svg?style=flat-square)](https://travis-ci.com/PortableBlenderManager)
+[![Coverage Status](https://img.shields.io/codecov/c/github/PortableBlenderManager/master.svg?style=flat-square)](https://codecov.io/gh/PortableBlenderManager)
+[![GitHub Issues](https://img.shields.io/github/issues/PortableBlenderManager.svg?style=flat-square)](https://github.com/PortableBlenderManager/issues)
+[![GitHub Stars](https://img.shields.io/github/stars/PortableBlenderManager.svg?style=social&label=Stars)](https://github.com/PortableBlenderManager/stargazers)
 
 ## Dependencies
 
