@@ -177,8 +177,6 @@ Contributions are welcome! If you have suggestions, improvements, or bug fixes, 
 [![License: MIT](https://img.shields.io/github/license/VermiNew/PortableBlenderManager.svg?style=flat-square)](LICENSE)
 [![Batch](https://img.shields.io/badge/Platform-Batch-blue.svg)](https://en.wikipedia.org/wiki/Batch_file)
 [![Python](https://img.shields.io/badge/Platform-Python-orange.svg)](https://www.python.org/)
-[![Build Status](https://img.shields.io/travis/com/VermiNew/PortableBlenderManager/master.svg?style=flat-square)](https://travis-ci.com/VermiNew/PortableBlenderManager)
-[![Coverage Status](https://img.shields.io/codecov/c/github/VermiNew/PortableBlenderManager/master.svg?style=flat-square)](https://codecov.io/gh/VermiNew/PortableBlenderManager)
 [![Stable Release](https://img.shields.io/badge/Release-Stable-darkgreen.svg)](https://github.com/VermiNew/PortableBlenderManager/releases/tag/stable)
 [![Contributor Friendly](https://img.shields.io/badge/Contributions-Welcome-darkgreen.svg)](https://github.com/VermiNew/PortableBlenderManager/blob/main/CONTRIBUTING.md)
 [![GitHub Issues](https://img.shields.io/github/issues/VermiNew/PortableBlenderManager.svg?style=flat-square)](https://github.com/VermiNew/PortableBlenderManager/issues)
