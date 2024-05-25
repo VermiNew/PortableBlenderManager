@@ -9,9 +9,9 @@ init(autoreset=True)
 
 class BlenderManager:
     def __init__(self):
-        self.blender_folder = "blender-4.0.2-windows-x64"
+        self.blender_folder = "blender-4.1.1-windows-x64"
         self.archive_folder = ".archive"
-        self.blender_archive = "blender-4.0.2-windows-x64.zip"
+        self.blender_archive = "blender-4.1.1-windows-x64.zip"
         self.appdata_folder = os.path.expandvars(r"%APPDATA%\Blender Foundation")
 
     def unpack_archive(self, archive_path, extract_to):
