@@ -87,10 +87,10 @@ class BlenderCleanup:
 
 def main():
     blender_config_files = [
-        r"C:\Users\Misiu\AppData\Roaming\Blender Foundation\Blender\4.0\config\platform_support.txt",
-        r"C:\Users\Misiu\AppData\Roaming\Blender Foundation\Blender\4.0\config\recent-files.txt",
-        r"C:\Users\Misiu\AppData\Roaming\Blender Foundation\Blender\4.0\config\recent-searches.txt",
-        r"C:\Users\Misiu\AppData\Roaming\Blender Foundation\Blender\4.0\config\userpref.blend",
+        r"C:\Users\Misiu\AppData\Roaming\Blender Foundation\Blender\4.1\config\platform_support.txt",
+        r"C:\Users\Misiu\AppData\Roaming\Blender Foundation\Blender\4.1\config\recent-files.txt",
+        r"C:\Users\Misiu\AppData\Roaming\Blender Foundation\Blender\4.1\config\recent-searches.txt",
+        r"C:\Users\Misiu\AppData\Roaming\Blender Foundation\Blender\4.1\config\userpref.blend",
     ]
     source_folder = r"C:\Users\Misiu\AppData\Roaming\Blender Foundation"
     script_directory = os.path.dirname(os.path.realpath(__file__))
