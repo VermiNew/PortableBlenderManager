@@ -1,7 +1,9 @@
 import os
 from tqdm import tqdm
 from colorama import Fore, Style, init
+
 init(autoreset=True)
+
 
 def delete_with_progress(path):
     if os.path.isdir(path):
@@ -18,6 +20,7 @@ def delete_with_progress(path):
         tqdm.write(f"File {path} deleted.")
     else:
         tqdm.write(f"{Fore.YELLOW}Path {path} not found. Skipping.")
+
 
 def main():
     dirs_to_delete = ["Blender Foundation", "blender-4.1.1-windows-x64"]
@@ -52,6 +55,7 @@ def main():
         delete_with_progress(path)
 
     print(f"{Fore.GREEN}Deletion complete.{Style.RESET_ALL}")
+
 
 if __name__ == "__main__":
     os.system("title Destroy Session Script")

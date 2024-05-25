@@ -1,7 +1,9 @@
 import os
 from tqdm import tqdm
 from colorama import Fore, Style, init
+
 init(autoreset=True)
+
 
 def delete_with_progress(path):
     if os.path.isdir(path):
@@ -15,6 +17,7 @@ def delete_with_progress(path):
         os.rmdir(path)
     else:
         tqdm.write(f"{Fore.YELLOW}Directory {path} not found. Skipping.")
+
 
 def main():
     dir_to_delete = "Blender Foundation"
@@ -35,6 +38,7 @@ def main():
     delete_with_progress(dir_to_delete)
 
     print(f"{Fore.GREEN}Deletion complete.{Style.RESET_ALL}")
+
 
 if __name__ == "__main__":
     os.system("title Reset Blender Configuration Script")
