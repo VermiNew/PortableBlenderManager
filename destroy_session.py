@@ -23,8 +23,8 @@ def delete_with_progress(path):
 
 
 def main():
-    dirs_to_delete = ["Blender Foundation", "blender-4.1.1-windows-x64"]
-    file_to_delete = ".archive/blender-4.1.1-windows-x64.zip"
+    dirs_to_delete = ["Blender Foundation", "blender-4.2.0-windows-x64"]
+    file_to_delete = ".archive/blender-4.2.0-windows-x64.zip"
 
     print(f"{Fore.BLUE}Checking for files and directories...{Style.RESET_ALL}")
     paths_found = []

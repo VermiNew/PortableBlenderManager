@@ -160,10 +160,10 @@ cython_debug/
 #.idea/
 
 # Ignore Blender binary folder
-blender-4.0.2-windows-x64/
+blender-4.2.0-windows-x64/
 
 # Ignore Blender Foundation related folder
 Blender Foundation/
 
 # Ignore specific Blender archive
-.archive/blender-4.0.2-windows-x64.zip
+.archive/blender-4.2.0-windows-x64.zip
